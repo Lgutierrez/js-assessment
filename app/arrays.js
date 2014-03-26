@@ -3,11 +3,16 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     indexOf : function(arr, item) {
-
     },
 
     sum : function(arr) {
 
+        var sum = 0;
+
+        for(i=0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
     },
 
     remove : function(arr, item) {
