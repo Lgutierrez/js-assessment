@@ -21,7 +21,13 @@ define(function() {
     },
 
     remove : function(arr, item) {
-
+        var x = arr.indexOf(item);
+        for(i=arr.length-1; i>=0; i--) {
+            if(arr[i] === item) {
+                arr.splice(i, 1);
+            }
+        }
+        return arr;
     },
 
     removeWithoutCopy : function(arr, item) {
