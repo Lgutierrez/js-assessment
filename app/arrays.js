@@ -53,7 +53,12 @@ define(function() {
     },
 
     count : function(arr, item) {
-
+        var b = 0;
+        for(i=0; i < arr.length; i++) {
+            if(arr[i] == item) 
+                b += 1;
+        }
+        return b;
     },
 
     duplicates : function(arr) {
