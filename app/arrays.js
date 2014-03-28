@@ -61,8 +61,8 @@ define(function() {
     },
 
     concat : function(arr1, arr2) {
-        var result = arr1.concat(arr2);
-        return result;
+        arr1.push.apply(arr1, arr2);
+        return arr1;
     },
 
     insert : function(arr, item, index) {
