@@ -87,15 +87,30 @@ define(function() {
           results.push(sorted[i]);
         }
       }
-      console.log(results);
+      var x = results.sort();
+      for(var j=0; j < results.length; j++) {
+        if(results[j+1] == results[j]) {
+          results.splice(j, 1);
+        }
+      }
+      return results;
     },
 
     square : function(arr) {
-    
+      for(var i=0; i < arr.length; i++) {
+        arr[i] = Math.pow(arr[i], 2);
+      }
+      return arr;
     },
 
     findAllOccurrences : function(arr, target) {
-
+      var all = [];
+      for(var i=0; i < arr.length; i++){
+        if(arr[i] == target) {
+          all.push(i);
+        }
+      }
+      return all;
     }
   };
 });
